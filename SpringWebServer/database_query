@@ -1,0 +1,14 @@
+CREATE TABLE student (
+	student_name VARCHAR(50) not null,
+	student_id VARCHAR(20) not null,
+	client_ip_address VARCHAR(20),
+	client_port_number VARCHAR(10),
+	access_time BIGINT(20) default 0,
+	mission_1_result TINYINT(1) default 0,
+	mission_2_result TINYINT(1) default 0,
+	mission_3_result TINYINT(1) default 0,
+	mission_4_result TINYINT(1) default 0,
+	score INT(10) default 0
+);
+
+ALTER TABLE student ADD UNIQUE (student_id);
